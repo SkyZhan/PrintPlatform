@@ -1,0 +1,46 @@
+@charset="utf-8";
+/*字体大小*/
+.fontsix
+{
+	font-size: 1.2em;/*小标题*/
+}
+/*上margin*/
+.topf_margin{
+	margin-top: 0.5rem;
+}
+/**浮动*/
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+/**/
+.paddlr
+{
+	padding: 0px 10px;
+}
+/*颜色*/
+.colorg{
+	color: #9d9d9d;
+}
+.colorc
+{
+	color:#cc2c2c;
+}
+.color_ed
+{
+	color: #1e91d0;
+}
+.colorf{
+	color: #fff;
+}
+/*按钮颜色*/
+.btn_ed
+{
+	background-color: #1e91d0;
+}
+small
+{
+	color: #9d9d9d;
+}

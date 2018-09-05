@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"> 
+
+	<title>校园打印平台</title>
+	
+    <script src="/PrintPlatform/js/jquery.min.js"></script>
+    <script src="/PrintPlatform/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/PrintPlatform/css/bootstrap.min.css">
+	<script src="./js/header.js"></script>
+  	<link rel="stylesheet" href="./css/index.css">
+  	<link rel="stylesheet" href="./css/main.css">
+
+  
+</head>
+<body  class="devpreview sourcepreview" style="min-height: 577px; cursor: auto;">
+<div class="container ">
+	<div class="page-header text_center">
+		<h3>
+			<b>校园打印平台</b>
+		</h3>
+	</div>
+</div>
+<nav class="navbar navbar-default navsetting" role="navigation" margin-bottom="-20px" >
+    <div class="container-fluid" > 
+    <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse" >
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="search.html">搜索</a></li>
+            <li class="dropdown">
+                <a href="selfCenter.html" class="dropdown-toggle" data-toggle="dropdown">
+                    个人中心 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">未确认订单</a></li>
+                    <li><a href="#">完成订单</a></li>
+                    <li><a href="#">注册成为商家</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+	<div class="row clearfix limitwidth" >
+		<div class="col-md-9 column list_margin" style="margin-top: 1rem; padding: 2rem;" >
+			<form class="form-horizontal" role="form">
+			  <div class="form-group">
+			    <label class="col-xs-2 control-label">姓名</label>
+			    <div class="col-xs-10">
+			      <input type="text" class="form-control" id="inputPassword" placeholder="">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-xs-2 control-label">联系号码</label>
+			    <div class="col-xs-10">
+			      <input type="text" class="form-control" id="inputPassword" placeholder="">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">地址</label>
+			    <div class="col-xs-10">
+			      <input type="text" class="form-control" id="inputPassword" placeholder="">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">上传文件</label>
+			    <div class="col-xs-10">
+			       <input type="file" id="inputfile" multiple="multiple" />
+			       <small>单个文件小于30M，文件仅限word/execl/pdf/ppt/jpg/png</small>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">份数</label>
+			    <div class="col-xs-10">
+			      <input type="text" class="form-control" id="inputPassword" placeholder="" size="5">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">类型</label>
+			    <div class="col-xs-10">
+			    	<div class="radio">
+				      	<label class="radio-inline">
+				        	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 单面
+					    </label>
+					    <label class="radio-inline">
+					        <input type="radio" name="optionsRadios" id="optionsRadios2"  value="option2"> 双面
+					    </label>
+				    </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">色彩</label>
+			    <div class="col-xs-10">
+			    	<div class="radio">
+				      <label class="radio-inline">
+				        	<input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 黑白
+					    </label>
+					    <label class="radio-inline">
+					        <input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option2"> 彩色
+					    </label>
+					    <label class="radio-inline">
+					        <input type="radio" name="optionsRadiosinline" id="optionsRadios5"  value="option2"> 混合
+					    </label>
+					 </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword" class="col-xs-2 control-label">备注</label>
+			    <div class="col-xs-10">
+			      <textarea class="form-control" rows="3" style="resize: none;"></textarea>
+			      <small>打印要求详细说明：打印混合，或者首页单独打印，加胶装等等</small>
+			    </div>
+			  </div>
+			   <button type="submit" class="btn btn-default btn-block btn-info">确认下单</button>
+			</form>
+			
+		</div>
+
+		<div class="col-md-3 column	plat-sidebar">
+			<div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-title"><span>Hot Shop</span></h2>
+		        <!--热门的店铺两家 begin-->
+		        <img src="./images/06.jpg" alt="Hot Shop" class="plat-entry-img" >
+		        <p class="shop_name">
+					墨家巨子
+				</p>
+				<p style="text-align: -webkit-left;"><span style="font-size:1.6rem">销量：<b style="color:#cc2c2c">609单</b></span><span class="shop_locate">第几栋</span></p>
+				<p class="shop_resume top_margin ">
+					本店可彩印，黑白，双面，海报，毕业论文打印，数量多多，优惠多多。这是个神奇的师姐，叭叭叭叭叭啦啦啦啦啦啦小魔仙变变身
+				</p>
+				<!--end-->
+
+		    </div>
+		    <div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-text-center plat-title"><span>Contact ME</span></h2>
+		        <p style="margin:20px 0;">
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/qq.png" width="35px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/github.png" width="32px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/wechat.png" width="35px"></a>
+		           <!-- <a href="" class=" am-icon-fw plat-icon"><img src="./images/sina.png" width="35px"></a> -->
+		        <!--     <a href=""><span class="am-icon-weixin am-icon-fw plat-icon"></span></a> -->
+		        </p>
+		    </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

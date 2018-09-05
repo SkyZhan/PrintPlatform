@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"> 
+
+	<title>校园打印平台</title>
+	
+    <script src="/PrintPlatform/js/jquery.min.js"></script>
+    <script src="/PrintPlatform/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/PrintPlatform/css/bootstrap.min.css">
+	<script src="./js/header.js"></script>
+  	<link rel="stylesheet" href="./css/index.css">
+  	<link rel="stylesheet" href="./css/main.css">
+  	<script type="text/javascript">
+  		function PreviewImage(imgFile) {
+	      var filextension = imgFile.value.substring(imgFile.value
+	        .lastIndexOf("."), imgFile.value.length);
+	      filextension = filextension.toLowerCase();
+	      if ((filextension != '.jpg') && (filextension != '.gif')
+	        && (filextension != '.jpeg') && (filextension != '.png')
+	        && (filextension != '.bmp')) {
+	       alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+	       imgFile.focus();
+	      } else {
+	       var path;
+	       if (document.all)//IE
+	       {
+	        imgFile.select();
+	        path = document.selection.createRange().text;
+	        document.getElementById("photo_info").innerHTML = "";
+	        document.getElementById("photo_info").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\""
+	          + path + "\")";//使用滤镜效果  
+	       } else//FF
+	       {
+	        path = window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+	        //path = imgFile.files[0].getAsDataURL();// FF 3.0
+	        document.getElementById("photo_info").innerHTML = "<img id='img1' width='80px' height='80px' src='"+path+"'/>";
+	        //document.getElementById("img1").src = path;
+	       }
+	      }
+	    }
+  	</script>
+  	<style type="text/css">
+  		.wrapper {  
+	    display:inline-block; 
+	    background-image: url("./images/add.jpg"); 
+	    height:80px; 
+	    width:80px;
+	    border-radius: 5px;
+	    border:1px solid #9d9d9d; 
+	    overflow:hidden; 
+	    cursor:pointer;
+	    float: left;
+	    
+	}
+	.wrapper input{ opacity: 0; height:50px; width:50px;}
+
+  	</style>
+  
+</head>
+<body  class="devpreview sourcepreview" style="min-height: 577px; cursor: auto;">
+<div class="container ">
+	<div class="page-header text_center">
+		<h3>
+			<b>校园打印平台</b>
+		</h3>
+	</div>
+</div>
+<nav class="navbar navbar-default navsetting" role="navigation" margin-bottom="-20px" >
+    <div class="container-fluid" > 
+    <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse" >
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="search.html">搜索</a></li>
+            <li class="dropdown active">
+                <a href="selfCenter.html" class="dropdown-toggle" data-toggle="dropdown">
+                    个人中心 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="waitOrderList.html">未确认订单</a></li>
+                    <li><a href="orderList.html">完成订单</a></li>
+                    <li><a href="registeshop.html">注册成为商家</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+	<div class="row clearfix limitwidth" >
+		<div class="col-md-8 column list_margin" >
+			<h4>
+				<b>注册成为商家</b>
+			</h4>
+			<!-- 循环此处 begin-->
+			<div class="col-md-12 top_margin">
+				
+				<div class="row clearfix shop_setting" style="border:1px solid #eee;padding:1rem 0;">
+					
+					<form class="form-horizontal" role="form" style="margin-left:1rem">
+						<div class="form-group " >
+							<label for="inputEmail3" class="col-xs-3 control-label">姓名</label>
+							<div class="col-xs-8">
+								<input type="email" class="form-control" id="inputEmail3" />
+							</div>
+						</div>
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-xs-3 control-label">手机号码</label>
+							<div class="col-xs-8">
+								<input type="text" class="form-control" id="inputPassword3" />
+							</div>
+						</div>
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-xs-3 control-label">验证码</label>
+							<div class="col-xs-4">
+								<input type="text" class="form-control" id="inputPassword3" />
+							</div>
+							<div class="col-xs-4">
+								<button type="button" class="btn btn-default btn_ed colorf">获取验证码</button>
+							</div>
+						</div>
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-xs-3 control-label">微信号</label>
+							<div class="col-xs-8">
+								<input type="text" class="form-control" id="inputPassword3" />
+							</div>
+						</div>
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-xs-3 control-label">店铺名称</label>
+							<div class="col-xs-8">
+								<input type="text" class="form-control"  />
+								<small>来个具有吸引力的名称，增加客流量</small>
+							</div>
+						</div>
+						<div class="form-group">
+							 <label for="inputPassword3" class="col-xs-3 control-label">楼栋</label>
+							<div class="col-xs-8">
+								<input type="text" class="form-control"  />
+								<small>描述下所住或者就近宿舍楼栋，一栋即可，比如：18</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label  class="col-xs-3 control-label">店铺简述</label>
+							<div class="col-xs-8">
+								 <textarea class="form-control" rows="3" style="resize: none;"></textarea>
+								 <small>描述下店铺能够打印：黑白，彩印...</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword3" class="col-xs-3 control-label">价格说明</label>
+							<div class="col-xs-8">
+								<textarea class="form-control" rows="2" style="resize: none;"></textarea>
+								<small>打印价格说明</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<label  class="col-xs-3 control-label ">介绍图片</label>
+							<div class="col-xs-9" id="photo_info">
+								<a href="javascript:" class="wrapper">
+						            <input name="info_photo" type="file" value="" id="info_photo" onchange='PreviewImage(this)' width="60px" height="200px" />
+						         </a>
+						         <br/><br/><br/><br/><small>为你的店铺添加一张特色的图片吧</small>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-offset-2 col-xs-8">
+								 <button type="submit" class="btn btn-default btn-block btn_ed colorf">注册</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--end-->
+		</div>
+
+		<div class="col-md-4 column	plat-sidebar">
+			<div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-text-center plat-title"><span>About ME</span></h2>
+		        <img src="./images/06.jpg" alt="about me" class="plat-entry-img" >
+		        <h3 class="text_center">
+					汉纸
+				</h3>
+				<div class="row clearfix center-block top_margin">
+					<div class="col-xs-4 col-md-4 column">
+						 <span class="label label-danger padd_rad">凶残</span>
+					</div>
+					<div class="col-xs-4 col-md-4 column">
+						 <span class="label label-warning padd_rad">霸气</span>
+					</div>
+					<div class="col-xs-4 col-md-4 column">
+						 <span class="label label-primary padd_rad">吃肉</span>
+					</div>
+				</div>
+		        <p class="top_margin">
+		            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euixsod. Donec sed odio dui.
+		        </p>
+		        <p>
+		        	我不想成为一个庸俗的人。十年百年后，当我们死去，质疑我们的人同样死去，后人看到的是裹足不前、原地打转的你，还是一直奔跑、走到远方的我？
+		        </p>
+
+		    </div>
+		    <div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-text-center plat-title"><span>Contact ME</span></h2>
+		        <p style="margin:20px 0;">
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/qq.png" width="35px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/github.png" width="32px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/wechat.png" width="35px"></a>
+		           <!-- <a href="" class=" am-icon-fw plat-icon"><img src="./images/sina.png" width="35px"></a> -->
+		        <!--     <a href=""><span class="am-icon-weixin am-icon-fw plat-icon"></span></a> -->
+		        </p>
+		    </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

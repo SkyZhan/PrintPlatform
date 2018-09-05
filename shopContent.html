@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"> 
+
+	<title>Bootstrap 实例 - 代码</title>
+	
+    <script src="/PrintPlatform/js/jquery.min.js"></script>
+    <script src="/PrintPlatform/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/PrintPlatform/css/bootstrap.min.css">
+	<script src="./js/header.js"></script>
+  	<link rel="stylesheet" href="./css/index.css">
+  	<link rel="stylesheet" href="./css/main.css">
+  	<script type="text/javascript">
+	  	function jsCopy(){ 
+	        var e=document.getElementById("contents");//对象是contents 
+	        e.select(); //选择对象 
+	        tag=document.execCommand("Copy"); //执行浏览器复制命令
+	        if(tag){
+	      	  alert('复制内容成功');
+	        }
+	    } 
+
+  	</script>
+
+  
+</head>
+<body  class="devpreview sourcepreview" style="min-height: 577px; cursor: auto;">
+<div class="container ">
+	<div class="page-header text_center">
+		<h3>
+			<b>校园打印平台</b>
+		</h3>
+	</div>
+</div>
+<nav class="navbar navbar-default navsetting" role="navigation" margin-bottom="-20px" >
+    <div class="container-fluid" > 
+    <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse" >
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="search.html">搜索</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    个人中心 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">未确认订单</a></li>
+                    <li><a href="#">完成订单</a></li>
+                    <li><a href="#">注册成为商家</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container ">
+	<div class="row clearfix limitwidth" >
+		<div class="col-md-9 column list_margin mycar_margin" >
+			<div class="col-md-6 mycar_margin">
+				<div id="myCarousel" class="carousel slide">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>   
+					<!-- 轮播（Carousel）项目 -->
+					  <!-- 轮播图片 -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					      <img src="./images/03.jpg">
+					    </div>
+					    <div class="item">
+					      <img src="./images/04.jpg">
+					    </div>
+					    <div class="item">
+					      <img src="./images/05.jpg">
+					    </div>
+					  </div>
+					 
+				</div>
+			</div>
+			<!-- 循环 end -->
+			<div class="col-md-6">
+				<div class="row clearfix shop_setting top_margin">
+					<div class="col-md-10 column">
+						<p class="shop_name">
+							墨家巨子
+						</p>
+						<p style="text-align: -webkit-left;"><span style="font-size:1.6rem">销量：<b class="colorc">609单</b></span><span class="shop_locate">第几栋</span></p>
+						<p>价格简述：两毛单面，三毛双面</p>
+						<p class=" colorg">
+							本店可彩印，黑白，双面，海报，毕业论文打印，数量多多，优惠多多。这是个神奇的师姐，叭叭叭叭叭啦啦啦啦啦啦小魔仙变变身
+						</p>
+						<p >联系</p>
+						<p>手机号码：17909928390<a href="tel:123456789" class="glyphicon glyphicon-earphone colorc icon"></a></p>
+						<p>微信：<span id="contents">utf-98272i</span> <a onClick="jsCopy()"  class="glyphicon glyphicon-envelope colorc icon"></a></p>
+						<button type="button" class="btn btn-info btn_ed btn-block">下单</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 column	plat-sidebar">
+			<div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-title"><span>Hot Shop</span></h2>
+		        <!--热门的店铺两家 begin-->
+		        <img src="./images/06.jpg" alt="Hot Shop" class="plat-entry-img" >
+		        <p class="shop_name">
+					墨家巨子
+				</p>
+				<p style="text-align: -webkit-left;"><span style="font-size:1.6rem">销量：<b style="color:#cc2c2c">609单</b></span><span class="shop_locate">第几栋</span></p>
+				<p class="shop_resume top_margin ">
+					本店可彩印，黑白，双面，海报，毕业论文打印，数量多多，优惠多多。这是个神奇的师姐，叭叭叭叭叭啦啦啦啦啦啦小魔仙变变身
+				</p>
+				<!--end-->
+
+		    </div>
+		    <div class="plat-sidebar-widget plat-bor">
+		        <h2 class="plat-text-center plat-title"><span>Contact ME</span></h2>
+		        <p style="margin:20px 0;">
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/qq.png" width="35px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/github.png" width="32px"></a>
+		            <a href="" class="am-icon-fw plat-icon"><img src="./images/wechat.png" width="35px"></a>
+		          <!--  <a href="" class=" am-icon-fw plat-icon"><img src="./images/sina.png" width="35px"></a> -->
+		        <!--     <a href=""><span class="am-icon-weixin am-icon-fw plat-icon"></span></a> -->
+		        </p>
+		    </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
